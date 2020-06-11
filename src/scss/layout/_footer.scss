@@ -1,2 +1,15 @@
 .page__footer {
+  border: 1px solid red;
+
+  &__scrollup {
+    height: 45px;
+    width: 45px;
+    background-color: $color-light;
+    border-radius: 50%;
+
+    & img {
+      height: 12px;
+      margin-top: 18px;
+    }
+  }
 }
