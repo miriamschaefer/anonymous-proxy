@@ -12,7 +12,7 @@ body {
   align-items: center;
   justify-content: center;
 
-  // IMAGE BACKGROUND
+  // BACKGROUND IMAGE
   background: url("../images/cover.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -44,6 +44,7 @@ body {
   }
 
   // SCROLL DOWN ICON
+
   &__arrow {
     height: 2.5rem;
     width: 2.5rem;
@@ -56,6 +57,8 @@ body {
     }
   }
 }
+
+// BLOG
 
 .blog {
   margin-left: 0.8333rem;
@@ -84,6 +87,8 @@ body {
     margin-top: 0.8333rem;
   }
 
+  // GO BUTTON
+
   &__button {
     border: 2px solid $color-accent;
     width: 4.222rem;
@@ -95,6 +100,8 @@ body {
     margin-bottom: 2.5rem;
   }
 }
+
+// 3 REASONS BLOCK
 
 .reasons {
   background-color: $color-light-background;
@@ -108,12 +115,12 @@ body {
     @include title2;
   }
 
-  &__subtitle {
-    @include title3;
-  }
-
   &__block {
     margin-bottom: 2.5rem;
+
+    &__subtitle {
+      @include title3;
+    }
 
     & p {
       margin-top: 0.2778rem;
@@ -122,20 +129,22 @@ body {
     }
   }
 
+  // MORE REASONS BUTTON
+
   &__button {
     &--accented {
       margin: auto;
       color: $color-light;
+      font-size: 1.111rem;
       background-color: $color-accent;
       width: 10.22rem;
       height: 2.5rem;
       border-radius: 1.222rem;
       text-align: center;
-      margin-top: 1.667rem;
       margin-bottom: 3.333rem;
 
       & p {
-        margin-top: 11px;
+        margin-top: 0.5556rem;
       }
     }
   }
