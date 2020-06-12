@@ -1,15 +1,4 @@
 .footer {
-  //STYLES
-
-  background-color: $color-dark-secondary;
-  color: $color-light;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  //SCROLL UP BUTTON
-
   &__scrollup {
     height: 2.5rem;
     width: 2.5rem;
@@ -18,35 +7,74 @@
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
 
     // ICON MOVEMENT
-    position: relative;
-    top: -20px;
+    position: absolute;
+    top: 222%;
+    left: 45%;
 
     & img {
       height: 1.111rem;
-      margin-top: 0.6667rem;
-      margin-left: 0.8rem;
+      margin-top: 0.67rem;
+      margin-left: 0.755rem;
+    }
+
+    @include tablet {
+      top: 160%;
+      left: 47%;
     }
   }
-  &__navigation {
-    @include footer-menus;
-  }
+  //STYLES
+  &__area {
+    background-color: $color-dark-secondary;
+    color: $color-light;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-  &__socialmedia {
-    @include footer-menus;
-  }
+    &__navigation {
+      margin-top: 2.056rem;
+      @include footer-menus;
+    }
 
-  &__copy {
-    margin-bottom: 2.5rem;
-    text-transform: lowercase;
-    font-size: 0.7778rem;
+    &__socialmedia {
+      @include footer-menus;
+    }
 
-    span {
-      display: block;
-      text-align: center;
-      line-height: 1.667rem;
+    &__copy {
+      margin-bottom: 2.5rem;
+      text-transform: lowercase;
+      font-size: 0.7778rem;
 
-      .fa-heart {
-        color: $color-accent;
+      span {
+        display: block;
+        text-align: center;
+        line-height: 1.667rem;
+
+        .fa-heart {
+          color: $color-accent;
+        }
+      }
+    }
+
+    @include tablet {
+      flex-direction: row-reverse;
+      justify-content: space-around;
+      // align-items: flex-start;
+
+      &__copy {
+        text-align: left;
+      }
+
+      &__navigation {
+        & ul {
+          text-align: left;
+        }
+      }
+
+      &__socialmedia {
+        & ul {
+          text-align: left;
+        }
       }
     }
   }
