@@ -3,6 +3,9 @@ body {
   font-family: $font-main;
 }
 
+.wrapper {
+  border: 1px solid red;
+}
 // HERO
 
 .hero {
@@ -28,6 +31,7 @@ body {
     text-transform: uppercase;
     font-size: 2.333rem;
     margin-top: 15.78rem;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 
     span {
       display: block;
@@ -55,6 +59,28 @@ body {
       height: 0.6667rem;
       margin-top: 1rem;
     }
+  }
+
+  @include tablet {
+    .hero {
+      // TEXT TRANSFORMATION
+      &__title {
+        font-size: 4.444rem;
+        margin-top: 27.78rem;
+
+        & span {
+          line-height: 5.889rem;
+        }
+      }
+    }
+    & p {
+      font-size: 1.333rem;
+      margin-bottom: 0;
+    }
+  }
+  //SCROLL ICON MOVEMENT
+  &__arrow {
+    transform: translate(0%, 200%);
   }
 }
 
@@ -98,6 +124,28 @@ body {
     color: $color-accent;
     margin-top: 1.667rem;
     margin-bottom: 2.5rem;
+  }
+
+  @include tablet {
+    margin-left: 2.167rem;
+    margin-right: 2.167rem;
+
+    &__title {
+      font-size: 1.444rem;
+
+      & span {
+        display: inline-block;
+      }
+    }
+
+    &__opening {
+      font-size: 1.111rem;
+    }
+
+    &__button {
+      width: 5.056rem;
+      margin-bottom: 3.333rem;
+    }
   }
 }
 
