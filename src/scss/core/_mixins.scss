@@ -1,3 +1,5 @@
+// RESPONSIVE
+
 @mixin tablet {
   @media all and (min-width: $tablet) {
     @content;
@@ -8,4 +10,20 @@
   @media all and (min-width: $desktop) {
     @content;
   }
+}
+
+// TITLES
+@mixin title2 {
+  font-family: $font-titles;
+  text-transform: capitalize;
+  font-size: 1.333rem;
+  line-height: 1.667rem;
+}
+
+@mixin title3 {
+  font-family: $font-titles;
+  color: $color-dark;
+  text-transform: capitalize;
+  font-size: 1rem;
+  line-height: 1.667rem;
 }

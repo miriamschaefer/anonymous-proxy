@@ -71,11 +71,7 @@ body {
   }
 
   &__title {
-    font-family: $font-titles;
-    text-transform: capitalize;
-    font-size: 1.333rem;
-    line-height: 1.667rem;
-
+    @include title2;
     span {
       display: block;
     }
@@ -85,6 +81,7 @@ body {
     color: $color-secondary-text;
     line-height: 1.667rem;
     margin-right: 0.8333rem;
+    margin-top: 0.8333rem;
   }
 
   &__button {
@@ -100,12 +97,46 @@ body {
 }
 
 .reasons {
-  border: 1px solid blue;
   background-color: $color-light-background;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+  text-align: center;
+  padding: 3.889rem 3.889rem 0 3.889rem;
+
+  &__title {
+    @include title2;
+  }
+
+  &__subtitle {
+    @include title3;
+  }
+
+  &__block {
+    margin-bottom: 2.5rem;
+
+    & p {
+      margin-top: 0.2778rem;
+      color: $color-dark;
+      line-height: 1.667rem;
+    }
+  }
 
   &__button {
     &--accented {
+      margin: auto;
+      color: $color-light;
       background-color: $color-accent;
+      width: 10.22rem;
+      height: 2.5rem;
+      border-radius: 1.222rem;
+      text-align: center;
+      margin-top: 1.667rem;
+      margin-bottom: 3.333rem;
+
+      & p {
+        margin-top: 11px;
+      }
     }
   }
 }
