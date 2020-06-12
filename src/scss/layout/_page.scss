@@ -3,9 +3,6 @@ body {
   font-family: $font-main;
 }
 
-.wrapper {
-  border: 1px solid red;
-}
 // HERO
 
 .hero {
@@ -33,10 +30,28 @@ body {
     margin-top: 15.78rem;
     text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 
+    @include tablet {
+      font-size: 4.444rem;
+      margin-top: 27.78rem;
+    }
+
+    @include desktop {
+      font-size: 5.556rem;
+      margin-top: 30rem;
+    }
+
     span {
       display: block;
       text-align: center;
       line-height: 3.056rem;
+
+      @include tablet {
+        line-height: 5.889rem;
+      }
+
+      @include desktop {
+        line-height: 7.333rem;
+      }
     }
   }
 
@@ -45,6 +60,11 @@ body {
     color: $color-light;
     margin-top: 0.5556rem;
     margin-bottom: 2.5rem;
+
+    @include tablet {
+      font-size: 1.333rem;
+      margin-bottom: 0;
+    }
   }
 
   // SCROLL DOWN ICON
@@ -59,28 +79,10 @@ body {
       height: 0.6667rem;
       margin-top: 1rem;
     }
-  }
 
-  @include tablet {
-    .hero {
-      // TEXT TRANSFORMATION
-      &__title {
-        font-size: 4.444rem;
-        margin-top: 27.78rem;
-
-        & span {
-          line-height: 5.889rem;
-        }
-      }
+    @include tablet {
+      transform: translate(0%, 200%);
     }
-    & p {
-      font-size: 1.333rem;
-      margin-bottom: 0;
-    }
-  }
-  //SCROLL ICON MOVEMENT
-  &__arrow {
-    transform: translate(0%, 200%);
   }
 }
 
@@ -88,6 +90,16 @@ body {
 
 .blog {
   margin-left: 0.8333rem;
+
+  @include tablet {
+    margin-left: 2.167rem;
+    margin-right: 2.167rem;
+  }
+
+  @include desktop {
+    margin-left: 15.28rem;
+    margin-right: 15.28rem;
+  }
 
   &__lead {
     color: $color-light-details;
@@ -97,12 +109,27 @@ body {
     font-weight: 200;
     margin-top: 1.667rem;
     padding-bottom: 0.5rem;
+
+    @include desktop {
+      font-size: 0.8889rem;
+      margin-top: 3.333rem;
+    }
   }
 
   &__title {
     @include title2;
     span {
       display: block;
+    }
+    @include tablet {
+      font-size: 1.444rem;
+
+      & span {
+        display: inline-block;
+      }
+    }
+    @include desktop {
+      font-size: 1.778rem;
     }
   }
 
@@ -111,6 +138,10 @@ body {
     line-height: 1.667rem;
     margin-right: 0.8333rem;
     margin-top: 0.8333rem;
+
+    @include tablet {
+      font-size: 1.111rem;
+    }
   }
 
   // GO BUTTON
@@ -124,27 +155,14 @@ body {
     color: $color-accent;
     margin-top: 1.667rem;
     margin-bottom: 2.5rem;
-  }
 
-  @include tablet {
-    margin-left: 2.167rem;
-    margin-right: 2.167rem;
-
-    &__title {
-      font-size: 1.444rem;
-
-      & span {
-        display: inline-block;
-      }
-    }
-
-    &__opening {
-      font-size: 1.111rem;
-    }
-
-    &__button {
+    @include tablet {
       width: 5.056rem;
       margin-bottom: 3.333rem;
+    }
+
+    @include desktop {
+      width: 8.889rem;
     }
   }
 }
@@ -159,15 +177,48 @@ body {
   text-align: center;
   padding: 3.889rem 3.889rem 0 3.889rem;
 
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 5.556rem auto 5.556rem;
+    padding: 20px;
+  }
+
   &__title {
     @include title2;
+
+    @include tablet {
+      grid-column: span 3;
+      margin-top: 1.667rem;
+      font-size: 1.444rem;
+    }
+
+    @include desktop {
+      font-size: 1.778rem;
+    }
   }
 
   &__block {
     margin-bottom: 2.5rem;
+    @include tablet {
+      margin-top: 0;
+    }
+
+    @include desktop {
+      margin-left: 4.5rem;
+      margin-right: 4.5rem;
+    }
 
     &__subtitle {
       @include title3;
+      @include tablet {
+        font-size: 1.333rem;
+      }
+
+      &__content {
+        @include tablet {
+          font-size: 1.111px;
+        }
+      }
     }
 
     & p {
@@ -192,39 +243,19 @@ body {
       text-align: center;
       margin-bottom: 3.333rem;
 
-      & p {
-        margin-top: 0.5556rem;
-      }
-    }
-  }
-
-  @include tablet {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 5.556rem auto 5.556rem;
-    padding: 20px;
-
-    &__title {
-      grid-column: span 3;
-      margin-top: 1.667rem;
-      font-size: 1.444rem;
-    }
-
-    &__block {
-      margin-top: 0;
-
-      &__subtitle {
-        font-size: 1.333rem;
-      }
-
-      &__content {
-        font-size: 1.111px;
-      }
-    }
-    &__button {
-      &--accented {
+      @include tablet {
         grid-column: span 3;
         width: 210px;
         margin-bottom: 60px;
+      }
+
+      @include desktop {
+        width: 255px;
+        text-transform: capitalize;
+      }
+
+      & p {
+        margin-top: 0.5556rem;
       }
     }
   }

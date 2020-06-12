@@ -1,5 +1,8 @@
 .footer {
+  background-color: $color-dark-secondary;
+
   &__scrollup {
+    position: relative;
     height: 2.5rem;
     width: 2.5rem;
     background-color: $color-light;
@@ -7,37 +10,57 @@
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
 
     // ICON MOVEMENT
-    position: absolute;
-    top: 222%;
-    left: 45%;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     & img {
       height: 1.111rem;
       margin-top: 0.67rem;
       margin-left: 0.755rem;
     }
-
-    @include tablet {
-      top: 160%;
-      left: 47%;
-    }
   }
   //STYLES
   &__area {
-    background-color: $color-dark-secondary;
     color: $color-light;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    @include tablet {
+      flex-direction: row-reverse;
+      justify-content: space-evenly;
+      align-items: baseline;
+    }
+
+    @include desktop {
+      justify-content: center;
+    }
+
     &__navigation {
-      margin-top: 2.056rem;
       @include footer-menus;
+
+      @include tablet {
+        & ul {
+          text-align: left;
+        }
+
+        @include desktop {
+          padding-right: 5.556rem;
+        }
+      }
     }
 
     &__socialmedia {
       @include footer-menus;
+
+      @include tablet {
+        order: -1;
+        & ul {
+          text-align: left;
+        }
+      }
     }
 
     &__copy {
@@ -50,30 +73,16 @@
         text-align: center;
         line-height: 1.667rem;
 
+        @include tablet {
+          text-align: left;
+        }
+
+        @include desktop {
+          padding-right: 5.556rem;
+        }
+
         .fa-heart {
           color: $color-accent;
-        }
-      }
-    }
-
-    @include tablet {
-      flex-direction: row-reverse;
-      justify-content: space-around;
-      // align-items: flex-start;
-
-      &__copy {
-        text-align: left;
-      }
-
-      &__navigation {
-        & ul {
-          text-align: left;
-        }
-      }
-
-      &__socialmedia {
-        & ul {
-          text-align: left;
         }
       }
     }
