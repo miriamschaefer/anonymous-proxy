@@ -14,6 +14,21 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
+    // ANIMATION
+    &:hover {
+      animation: pulse 1s;
+      animation-iteration-count: 5;
+    }
+
+    @keyframes pulse {
+      0% {
+        background-color: $color-light;
+      }
+      100% {
+        background-color: $color-dark-secondary;
+      }
+    }
+
     & img {
       height: 1.111rem;
       margin-top: 0.67rem;
