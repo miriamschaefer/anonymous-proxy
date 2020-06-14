@@ -4,9 +4,8 @@
     height: 44px;
     background-color: $color-medium;
     position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    line-height: 45px;
 
     & img {
       width: 16px;
