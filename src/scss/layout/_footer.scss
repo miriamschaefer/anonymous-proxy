@@ -3,8 +3,8 @@
 
   &__scrollup {
     position: relative;
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 45px;
+    width: 45px;
     background-color: $color-light;
     border-radius: 50%;
     box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
@@ -30,9 +30,9 @@
     }
 
     & img {
-      height: 1.111rem;
-      margin-top: 0.67rem;
-      margin-left: 0.755rem;
+      height: 20px;
+      margin-top: 12px;
+      margin-left: 14px;
     }
   }
   //STYLES
@@ -62,7 +62,7 @@
         }
 
         @include desktop {
-          padding-right: 5.556rem;
+          padding-right: 100px;
         }
       }
     }
@@ -79,7 +79,7 @@
     }
 
     &__copy {
-      margin-bottom: 2.5rem;
+      margin-bottom: 45px;
       text-transform: lowercase;
       font-size: 0.7778rem;
 
@@ -93,7 +93,7 @@
         }
 
         @include desktop {
-          padding-right: 5.556rem;
+          padding-right: 45px;
         }
 
         .fa-heart {

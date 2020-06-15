@@ -1,11 +1,18 @@
 .header {
   &__icon {
-    width: 44px;
-    height: 44px;
-    background-color: $color-medium;
-    position: fixed;
-    text-align: center;
-    line-height: 45px;
+    & a {
+      width: 44px;
+      height: 44px;
+      background-color: $color-medium;
+      position: fixed;
+      text-align: center;
+      line-height: 45px;
+      transition: background-color ease-in 0.8s;
+
+      &:hover {
+        background-color: $color-accent;
+      }
+    }
 
     & img {
       width: 16px;
