@@ -16,16 +16,29 @@
 
     // ANIMATION
     &:hover {
-      animation: pulse 1s;
+      animation: bounce 0.8s;
       animation-iteration-count: infinite;
+      animation-timing-function: ease;
     }
 
-    @keyframes pulse {
+    @keyframes bounce {
       0% {
+        transform: translateY(-50%) translateX(-50%);
         background-color: $color-light;
       }
-      100% {
+      30% {
+        transform: translateY(-40%) translateX(-50%);
         background-color: $color-dark-secondary;
+      }
+
+      50% {
+        transform: translateY(-60%) translateX(-50%);
+        background-color: $color-dark-secondary;
+      }
+
+      100% {
+        transform: translateY(-50%) translateX(-50%);
+        background-color: $color-light;
       }
     }
 
